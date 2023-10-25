@@ -83,7 +83,7 @@ function refresh() {
     const results = [];
 
     for (let i = 0; i < values.length; i++) {
-        results[i] = hantei(values[i] - returnpoint + yakitori[i]);
+        results[i] = hantei((values[i] - returnpoint + yakitori[i])/10);
     }
 
     if (first != -1) {
@@ -126,10 +126,11 @@ function totall() {
     for (let j = 0; j < textboxes.length; j++) {
         karisum = karisum + Number(textboxes[j]);
     }
+    console.log(karisum);
 
 
 
-    firstpoint = (sumpoint - karisum*100)/100 ;
+    firstpoint = (sumpoint - karisum*100)/1000 ;
 
     textboxes[Number(emptyBoxes)] = firstpoint;
     console.log(firstpoint);
