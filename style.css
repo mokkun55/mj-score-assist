@@ -1,0 +1,35 @@
+
+body {
+    font-size: 22px;
+}
+
+h1 {
+    font-size: larger;
+}
+
+.textbox{
+    font-size: larger;
+    text-align: right;
+    width: 80px;
+    height: 20px;
+}
+
+.result{
+    font-size: larger;
+    display: flex;
+}
+
+.result > div {
+    margin: 20px;
+}
+
+.checkbox{
+    width: 20px;
+    height: 20px;
+}
+
+button {
+    font-size: large;
+    width: 100px;
+    height: 50px;
+}

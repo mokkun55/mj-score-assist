@@ -3,44 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>スコアシート計算アシスト</title>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
-    <!-- <h1>スコアシート計算アシストツール</h1> -->
-    <!-- <li>オカ(TOP賞) +20</li>
+    <h1>スコアシート計算ｱｼｽﾄ ﾂｰﾙ</h1>
+    <li>オカ(TOP賞) +20</li>
     <li>焼き鳥 -8</li>
-    <li>TOPの人は入力しないで(最後に自動入力)</li> -->
+    <li>TOPの人は入力しないで</li>
 
     <label>
         三人打ち<input type="checkbox" id="type">
     </label>
+    <br>
+
     <!-- 25000から引いた数 -->
     <div id="rest_point">残りX点</div>
 
 
-    ①<input type="number" id="1p">00 点　　<label>焼き鳥<input type="checkbox" id="Y1p" onclick="this.disabled = true;"></label>
+    ①<input type="number" id="1p" class="textbox">00 点　　<label>焼き鳥<input type="checkbox" id="Y1p" class="checkbox" onclick="this.disabled = true;"  ></label>
     <br>
     <br>
-    ②<input type="number" id="2p">00 点　　<label>焼き鳥<input type="checkbox" id="Y2p" onclick="this.disabled = true;"></label>
+    ②<input type="number" id="2p" class="textbox">00 点　　<label>焼き鳥<input type="checkbox" id="Y2p" class="checkbox" onclick="this.disabled = true;"  ></label>
     <br>
     <br>
-    ③<input type="number" id="3p">00 点　　<label>焼き鳥<input type="checkbox" id="Y3p" onclick="this.disabled = true;"></label>
+    ③<input type="number" id="3p" class="textbox">00 点　　<label>焼き鳥<input type="checkbox" id="Y3p" class="checkbox" onclick="this.disabled = true;"  ></label>
     <br>
     <br>
-    ④<input type="number" id="4p">00 点　　<label>焼き鳥<input type="checkbox" id="Y4p" onclick="this.disabled = true;"></label>
+    ④<input type="number" id="4p" class="textbox">00 点　　<label>焼き鳥<input type="checkbox" id="Y4p" class="checkbox" onclick="this.disabled = true;"  ></label>
     <br>
     <br>
-    <button onclick="totall()">一位集計</button>
+    <button onclick="totall()" >集計</button>
 
 
 
     <!-- ポイント表示 TOP赤 -->
-    <div id="res1p"></div>
-    <div id="res2p"></div>
-    <div id="res3p"></div>
-    <div id="res4p"></div>
+    <div class="result">
+        <div id="res1p"></div>
+        <div id="res2p"></div>
+        <div id="res3p"></div>
+        <div id="res4p"></div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

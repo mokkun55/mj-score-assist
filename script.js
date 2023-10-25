@@ -44,19 +44,19 @@ type.addEventListener('change', function () {
 });
 
 Y1p.addEventListener('change', function () {
-    yakitori1 = -8;
+    yakitori1 = -80;
     refresh();
 });
 Y2p.addEventListener('change', function () {
-    yakitori2 = -8;
+    yakitori2 = -80;
     refresh();
 });
 Y3p.addEventListener('change', function () {
-    yakitori3 = -8;
+    yakitori3 = -80;
     refresh();
 });
 Y4p.addEventListener('change', function () {
-    yakitori4 = -8;
+    yakitori4 = -80;
     refresh();
 });
 
@@ -135,6 +135,7 @@ function totall() {
     textboxes[Number(emptyBoxes)] = firstpoint;
     console.log(firstpoint);
 
+    document.getElementById('res'+(first+1)+'p').style.color = 'red'; //firstを赤くする
     refresh();
 }
 
