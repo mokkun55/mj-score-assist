@@ -8,10 +8,10 @@
 
 </head>
 <body>
-    <h1>スコアシート計算ｱｼｽﾄ ﾂｰﾙ</h1>
+    <!-- <h1>スコアシート計算ｱｼｽﾄ ﾂｰﾙ</h1>
     <li>オカ(TOP賞) +20</li>
     <li>焼き鳥 -8</li>
-    <li>TOPの人は入力しないで</li>
+    <li>TOPの人は入力しないで</li> -->
 
     <label>
         三人打ち<input type="checkbox" id="type">
@@ -34,8 +34,8 @@
     ④<input type="number" id="4p" class="textbox">00 点　　<label>焼き鳥<input type="checkbox" id="Y4p" class="checkbox" onclick="this.disabled = true;"  ></label>
     <br>
     <br>
-    <button onclick="totall()" >集計</button>
-
+    <button onclick="totall()" id="totall_button" >集計</button>
+    <button onclick="clear()" >クリア</button>
 
 
     <!-- ポイント表示 TOP赤 -->

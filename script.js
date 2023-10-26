@@ -115,29 +115,36 @@ function totall() {
     }
 
     if (emptyBoxes.length >= 2) {
-        alert("2つ以上空白を作らないでください");
+        console.log("2つ以上空白を作らないでください");
     } else {
-        console.log(Number(emptyBoxes));
+        // console.log(Number(emptyBoxes));
         first = Number(emptyBoxes);
+    
+        //ここから 点数処理 ーーー
+        console.log(textboxes);
+        //配列合計足し算する
+        for (let j = 0; j < textboxes.length; j++) {
+            karisum = karisum + Number(textboxes[j]);
+        }
+        console.log(karisum);
+
+
+
+        firstpoint = (sumpoint - karisum*100)/1000 ;
+
+        textboxes[Number(emptyBoxes)] = firstpoint;
+        console.log(firstpoint);
+
+        document.getElementById(first+1+"p").value = firstpoint*10;
+        document.getElementById('res'+(first+1)+'p').style.color = 'red'; //firstを赤くする
+        refresh();
     }
-    //ここから 点数処理 ーーー
-    console.log(textboxes);
-    //配列合計足し算する
-    for (let j = 0; j < textboxes.length; j++) {
-        karisum = karisum + Number(textboxes[j]);
-    }
-    console.log(karisum);
-
-
-
-    firstpoint = (sumpoint - karisum*100)/1000 ;
-
-    textboxes[Number(emptyBoxes)] = firstpoint;
-    console.log(firstpoint);
-
-    document.getElementById('res'+(first+1)+'p').style.color = 'red'; //firstを赤くする
-    refresh();
 }
+
+function clear(){
+    
+}
+
 
 function hantei(number) {
     if (number > 0) {
